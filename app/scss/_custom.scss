@@ -1,0 +1,140 @@
+// Here you can add other styles
+
+.input-group-append {
+  background-color: #5e9daf;
+}
+.addFile {
+  display: none;
+}
+.worker_img img {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #ddd;
+}
+.master_table  tbody tr td:nth-child(3){
+	text-align: center!important
+}
+.ml-auto {
+    margin-right: 40px;
+}
+.app-header {
+  display: flex;
+  justify-content: flex-start;
+}
+.card_flex {
+  display: flex;
+  justify-content: space-around;
+}
+.card_f {
+  font-weight: 400;
+}
+.react-bs-table table td {
+  white-space: pre-wrap;
+}
+.table th{
+  padding-left: 10px!important;
+}
+.sidebar-fixed .main, .sidebar-fixed .app-footer {
+  margin-left: 0px!important;
+}
+.navbar-toggler {
+  visibility: hidden;
+}
+.card-body {
+  display: flex;
+  justify-content: center;
+}
+.pw_main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.react-bs-table-bordered {
+  height: auto!important;
+}
+.pw_main .pw_main_2{
+  flex: 3;
+ }
+form {
+  width: 100%;
+}
+.button-p-2 .btn {
+  width: 100%;
+  border-radius: 0!important;
+  color: #000!important;
+  padding: 10px 0px!important;
+  border: 0px!important;
+}
+.button-p-2 {
+  display: flex;
+}
+.p-2 {
+  padding: 0!important;
+}
+.button-p-2 .user-active {
+  background-color: #fff;
+}
+.button-p-2 .btn-secondary:focus, .btn-secondary.focus {
+  box-shadow: none!important;
+}
+.card-header span {
+  margin-left: 20px;
+}
+.card-header {
+  display: flex;
+}
+form input {
+  border: 1px solid rgb(221, 221, 221)!important;
+  color: #000!important;
+  padding-left: 10px!important;
+}
+form hr {
+  display: none;
+}
+.res_name {
+  width: 100%!important;
+}
+.pw_main_2 .card-body{
+  margin-top: 10px;
+}
+.pw_main_11 {
+  display: flex;
+}
+.res_main div {
+  width: 100%!important;
+}
+.row {
+  margin-left: 0px!important; 
+}
+form button {
+  background-image:(0deg, #f9bf2b 0%, #ea6b07 100%)!important;
+}
+
+@media (max-width: 980px){
+  .col-md-8 {
+    max-width: 100%!important;
+    form div {
+      flex-direction: column;
+    }
+  }
+  form > div > label {
+    -webkit-text-align: left;
+    text-align: left;
+}
+.pw_main {
+  flex-direction: column;
+}
+ 
+}
+@media (max-width: 576px){
+  .container {
+    max-width: 100%!important;
+}
+.main .container-fluid {
+  padding: 10px;
+}
+.row {
+  margin-top: -100px;
+}
+}
+
