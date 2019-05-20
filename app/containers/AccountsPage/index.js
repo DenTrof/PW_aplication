@@ -22,6 +22,7 @@ export class Accounts extends React.PureComponent { // eslint-disable-line react
     newBalance: false,
   };
 
+  // Table list to top
   componentDidMount() {
     const sort = document.querySelector('.order');
     sort.click();
@@ -36,16 +37,20 @@ export class Accounts extends React.PureComponent { // eslint-disable-line react
       });
     }
   }
+
+  // Create a new transaction
   sendAmount = () => {
     const { sendmoney } = this.props;
     return sendmoney();
   }
 
+  // User list by name (autocomplete)
   filterName = () => {
     const { filtername } = this.props;
     return filtername();
   }
 
+  // Create a new transaction as a copy from
   handleRowSelect = (row) => {
     const { formcomplite } = this.props;
     return formcomplite({ name: row.username, amount: row.amount });
@@ -68,7 +73,7 @@ export class Accounts extends React.PureComponent { // eslint-disable-line react
     };
     const { userInfo, userTrList } = this.props.account;
     const selectRow = {
-      mode: 'checkbox',  // multi select
+      mode: 'checkbox',
       onSelect: this.handleRowSelect,
     };
     return (
