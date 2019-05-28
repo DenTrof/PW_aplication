@@ -4,16 +4,12 @@
  *
  */
 
-import { AbilityBuilder } from '@casl/ability';
-
 import { fromJS } from 'immutable';
-import Cookie from 'app-cookie';
-
 import { TOKEN_ACTION } from './constants';
 
 
 const initialState = fromJS({
-  token: 'L8WhEmvPkK40fvyRo-WLBQ',
+  token: '',
 });
 
 

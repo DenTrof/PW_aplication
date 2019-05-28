@@ -22,7 +22,6 @@ export class Accounts extends React.PureComponent { // eslint-disable-line react
     newBalance: false,
   };
 
-  // Table list to top
   componentDidMount() {
     const sort = document.querySelector('.order');
     sort.click();
@@ -37,20 +36,16 @@ export class Accounts extends React.PureComponent { // eslint-disable-line react
       });
     }
   }
-
-  // Create a new transaction
   sendAmount = () => {
     const { sendmoney } = this.props;
     return sendmoney();
   }
 
-  // User list by name (autocomplete)
   filterName = () => {
     const { filtername } = this.props;
     return filtername();
   }
 
-  // Create a new transaction as a copy from
   handleRowSelect = (row) => {
     const { formcomplite } = this.props;
     return formcomplite({ name: row.username, amount: row.amount });
@@ -73,7 +68,7 @@ export class Accounts extends React.PureComponent { // eslint-disable-line react
     };
     const { userInfo, userTrList } = this.props.account;
     const selectRow = {
-      mode: 'checkbox',
+      mode: 'checkbox',  // multi select
       onSelect: this.handleRowSelect,
     };
     return (
@@ -89,6 +84,8 @@ export class Accounts extends React.PureComponent { // eslint-disable-line react
                   manually or copy transaction from "Transaction List"</li>
                 <li>Copy transaction: you must to marked choosen field and enter "Copy" button
                   ( selected value with minus will be convert to plus )
+                </li>
+                <li>You can marked only one field for coping data to form
                 </li>
               </ul>
             </CardBody>
@@ -120,17 +117,17 @@ export class Accounts extends React.PureComponent { // eslint-disable-line react
                   selectRow={selectRow}
                   version="4"
                 >
-                  <TableHeaderColumn isKey width="10%" dataField="id" >
+                  <TableHeaderColumn isKey width="0%" dataField="id" >
                     ID
                   </TableHeaderColumn>
                   <TableHeaderColumn dataField="date" width="25%" dataSort >
                     Date/Time
                   </TableHeaderColumn>
-                  <TableHeaderColumn dataField="username" width="45%" >
-                    Correspondent Name
+                  <TableHeaderColumn dataField="username" width="55%" >
+                    Name
                   </TableHeaderColumn>
                   <TableHeaderColumn dataField="amount" width="20%" >
-                    Transaction amount
+                    Amount
                   </TableHeaderColumn>
                 </BootstrapTable>
               </CardBody>

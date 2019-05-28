@@ -30,19 +30,16 @@ class LoginPage extends React.PureComponent { // eslint-disable-line react/prefe
     });
   }
 
-  // User registration
   onSubmit = () => {
     const { registration } = this.props;
     registration();
   }
 
-  // Logging in
   onSubmitLog = () => {
     const { logging } = this.props;
     logging();
   }
 
-  // Toggle Logging/Registration
   toggleForm = () => {
     this.setState({
       showForm: !this.state.showForm,

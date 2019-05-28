@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { compose } from 'redux';
-
-import { logoutAction } from 'containers/App/actions';
-import { Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Container } from 'reactstrap';
-import Header from 'components_coreui/Header/';
-import Footer from 'components_coreui/Footer/';
+import Header from 'components/Header/';
+import Footer from 'components/Footer/';
 import AccountsPage from 'containers/AccountsPage/';
 
 class Full extends Component {
@@ -17,9 +13,11 @@ class Full extends Component {
         <div className="app-body">
           <main className="main">
             <Container fluid>
-              <Switch>
-                <Route path="/" name="Accounts" component={AccountsPage} />
-              </Switch>
+              <BrowserRouter>
+                <Switch>
+                  <Route path="/" name="Accounts" component={AccountsPage} />
+                </Switch>
+              </BrowserRouter>
             </Container>
           </main>
         </div>
@@ -29,16 +27,4 @@ class Full extends Component {
   }
 }
 
-
-function mapDispatchToProps(dispatch) {
-  return {
-    logout: () => dispatch(logoutAction(false)),
-    dispatch,
-  };
-}
-
-const withConnect = connect(null, mapDispatchToProps);
-
-export default compose(
-  withConnect,
-)(Full);
+export default Full;

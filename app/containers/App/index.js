@@ -16,20 +16,13 @@ import reducer from './reducer';
 import saga from './saga';
 import axios from 'axios';
 import LoginPage from 'containers/LoginPage';
-import NotFoundPage from 'containers/NotFoundPage';
 import Full from 'containers/Full/';
+import NotFoundPage from 'containers/NotFoundPage';
 import { makeSelectForm, makeSelectFormReg } from './selectors';
 import { tokenAction } from './actions';
 
 
 // Styles
-// Import Flag Icons Set
-import 'flag-icon-css/css/flag-icon.min.css';
-// Import Font Awesome Icons Set
-import 'font-awesome/css/font-awesome.min.css';
-// Import Simple Line Icons Set
-import 'simple-line-icons/css/simple-line-icons.css';
-// Import Main styles for this application
 import '../../scss/style.scss';
 
 
@@ -108,19 +101,12 @@ class App extends React.PureComponent {
   )
 
   renderMain = () => (
-    <BrowserRouter>
-      <Switch>
-        <Route path="/" name="Home" render={(props) => <Full {...props} />} />
-        <Route component={NotFoundPage} />
-      </Switch>
-    </BrowserRouter>
+    <Full />
   )
 
   render() {
-    // console.log("this.state.token", this.state.token)
     let content = null;
 
-    // if (true) {
     if (this.state.created === 'Created') {
       const { saveToken } = this.props;
       saveToken(this.state.token);
